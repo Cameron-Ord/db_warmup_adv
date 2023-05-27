@@ -50,3 +50,7 @@ on student.id = enrollment.course_id
 group by name
 order by avg(grade_achieved) asc
 limit 3;
+
+select count(e.id), e.course_id
+from enrollment e 
+group by e.course_id;
